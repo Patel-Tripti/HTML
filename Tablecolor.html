@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:5500/pro7table.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=&lt;device-width&gt;, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <table cellspadding="5" cellspacing="5" border="3" width="500">
+        <tbody><tr>
+            <th rowspan="3">Day
+                </th><th colspan="3"> Seminar
+        </th></tr>
+        <tr>
+            <th colspan="2"> Schedule
+                </th><th rowspan="2"> Topic
+        </th></tr>
+      <tr>
+      <th> Begin
+        </th><th> End
+      </th></tr>
+      <tr>
+     <td rowspan="2"> Monday
+        </td><td rowspan="2" bgcolor="yellow"> 8.00 a.m
+            </td><td rowspan="2" bgcolor="lavender"> 5.00 p.m
+                </td><td>Introduction to XML
+      </td></tr>
+      <tr>
+        <td>Validity:DTD and Relax NG
+      </td></tr>
+      <tr>
+        <td rowspan="3"> Tuesday
+            </td><td bgcolor="yellow">  8.00 a.m
+                </td><td bgcolor="yellow"> 11:00 a.m
+                    </td><td rowspan="2"> Xpath
+      </td></tr>
+      <tr>
+        <td bgcolor="yellow"> 11:00 a.m 
+            </td><td bgcolor="lavender"> 2:00 p.m 
+                </td><td> XSL- Transfermation
+      </td></tr>
+      <tr>
+        <td bgcolor="lavender">2:00 p.m 
+            </td><td bgcolor="lavender">  5:00 p.m
+      </td></tr>
+      <tr>
+        <td> Wednesday
+            </td><td bgcolor="yellow"> 8:00 a.m 
+                </td><td bgcolor="lavender"> 12:00 p.m 
+                    </td><td> XSL Formatting Objects
+      </td></tr>
+    </tbody></table>
+    </center>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
